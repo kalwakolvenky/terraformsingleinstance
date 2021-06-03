@@ -102,7 +102,7 @@ data "aws_ami" "my_ami" {
 #     key    = "myterraform.tfstate"
 #     region = "us-east-1"
 #   }
-}
+#}
 
 resource "aws_instance" "web-1" {
     ami = "${data.aws_ami.my_ami.id}"
@@ -120,7 +120,6 @@ resource "aws_instance" "web-1" {
 	CostCenter = "ABCD"
     }
 }
-
 ##output "ami_id" {
 #  value = "${data.aws_ami.my_ami.id}"
 #}
